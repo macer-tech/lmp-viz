@@ -16,7 +16,7 @@ RUN apt-get update && \
     apt-get clean
 # copy necessary files from app folder
 # Shiny app 
-COPY /shiny_geocode ./app                       
+COPY /. ./app                       
 # renv.lock file
 COPY /renv.lock ./renv.lock
 # install renv & restore packages                       
