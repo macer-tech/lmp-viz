@@ -18,7 +18,7 @@ RUN apt-get update && \
 # Shiny app 
 COPY . ./app                       
 # install renv & restore packages                       
-RUN Rscript -e 'install.packages(c("renv", "rvest", "magrittr", "tibble")'
+RUN Rscript -e 'install.packages(c("renv", "rvest", "magrittr", "tibble"))'
 RUN Rscript -e 'renv::restore()'
 # remove install files                       
 RUN rm -rf /var/lib/apt/lists/*
