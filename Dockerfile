@@ -17,8 +17,6 @@ RUN apt-get update && \
 # copy necessary files from app folder
 # Shiny app 
 COPY /. ./app                       
-# renv.lock file
-COPY /renv.lock ./renv.lock
 # install renv & restore packages                       
 RUN Rscript -e 'install.packages(c("renv", "rvest", "magrittr", "tibble")'
 RUN Rscript -e 'renv::restore()'
